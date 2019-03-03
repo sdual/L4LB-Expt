@@ -1,0 +1,17 @@
+version: "2"
+
+services:
+  haproxy:
+    build: ./haproxy/.
+    ports:
+     - "8080:8080"
+
+  grpc-app1:
+    image: sdual/l4lbexpt-grpc-app:v1.0
+    ports:
+      - "8081:80"
+
+  grpc-app2:
+    image: sdual/l4lbexpt-grpc-app:v1.0
+    # ports:
+    #   - "8082:8080"
