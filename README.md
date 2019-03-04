@@ -24,3 +24,16 @@ $ docker exec -it l4lb-expt_grpc-app1_1 /bin/sh
 $ cd logs
 $ tail -f app.log
 ```
+
+### gRPC Gateway
+
+```
+$ cd golang
+$ go run main.go
+```
+
+gRPC Gateway provides RESTful API. You can send a request as following.
+
+```
+$ curl -H 'Content-Type:application/json' -d '{"name":"sdual"}' http://localhost:9090/v1/greet
+```
