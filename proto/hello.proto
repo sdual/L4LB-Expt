@@ -11,8 +11,7 @@ import "google/api/annotations.proto";
 service Greeter {
   rpc SayHello (HelloRequest) returns (HelloReply) {
     option (google.api.http) = {
-      post: "/v1/greet"
-      body: "*"
+      get: "/v1/greet"
     };
   }
 }

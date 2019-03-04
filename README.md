@@ -35,5 +35,5 @@ $ go run main.go
 gRPC Gateway provides RESTful API. You can send a request as following.
 
 ```
-$ curl -H 'Content-Type:application/json' -d '{"name":"sdual"}' http://localhost:9090/v1/greet
+$ curl "http://localhost:9090/v1/greet?name=sdual"
 ```
