@@ -20,9 +20,9 @@ public class GreeterClientMultipleReq {
           .setName("sdual")
           .build();
       HelloReply reply = stub.sayHello(request);
-      System.out.println("Reply: " + reply);
+      System.out.println(i + ": Reply: " + reply);
       try {
-        Thread.sleep(1000);
+        Thread.sleep(100);
       } catch (InterruptedException e) {
       }
     }

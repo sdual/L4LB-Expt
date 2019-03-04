@@ -52,9 +52,11 @@ public class Boot {
   public static void main(String[] args) {
     try {
       io.grpc.Server server = NettyServerBuilder.forPort(80)
-          .maxConnectionAge(1000, TimeUnit.MILLISECONDS)
+          .maxConnectionAge(100, TimeUnit.MILLISECONDS)
+          .maxConnectionAgeGrace(200, TimeUnit.MILLISECONDS)
           .addService(new GreeterImpl())
           .build();
+
       server.start();
       server.awaitTermination();
     } catch (Exception e) {

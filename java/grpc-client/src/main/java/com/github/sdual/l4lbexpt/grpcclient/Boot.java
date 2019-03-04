@@ -8,7 +8,7 @@ public class Boot {
     String host = "localhost";
 
     //new GreeterClientSingleReq().callGreeter(host, port);
-    new GreeterClientMultipleReq().callGreeter(host, port, 100);
+    new GreeterClientMultipleReq().callGreeter(host, port, 10000);
 
   }
 
