@@ -3,6 +3,7 @@
 This repository is for the experiment whether the L4 load balancer distributes requests to the gRPC application servers uniformly.
 
 https://github.com/grpc/proposal/blob/master/A9-server-side-conn-mgt.md
+https://github.com/grpc/proposal/blob/master/A6-client-retries.md#hedging-policy
 
 ## Usage
 
