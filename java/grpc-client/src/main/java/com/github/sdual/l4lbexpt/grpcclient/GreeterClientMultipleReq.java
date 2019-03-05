@@ -11,25 +11,22 @@ public class GreeterClientMultipleReq {
 
   public void callGreeter(String host, int port, int num) {
     ManagedChannel channel = ManagedChannelBuilder.forAddress(host, port)
+        .enableRetry()
+        //.maxRetryAttempts(3)
         .usePlaintext()
         .build();
 
     GreeterGrpc.GreeterBlockingStub stub = GreeterGrpc.newBlockingStub(channel);
 
     for (int i = 0; i < num; i++) {
-      try {
-        HelloRequest request = HelloRequest.newBuilder()
-            .setName("sdual")
-            .build();
-        HelloReply reply = stub.sayHello(request);
-        System.out.println(i + ": Reply: " + reply);
-      } catch (StatusRuntimeException e) {
-        e.printStackTrace();
-        System.out.println(i + "番目");
-      }
+      HelloRequest request = HelloRequest.newBuilder()
+          .setName("sdual")
+          .build();
+      HelloReply reply = stub.sayHello(request);
+      System.out.println(i + ": Reply: " + reply);
 
       try {
-        Thread.sleep(50);
+        Thread.sleep(10);
       } catch (InterruptedException e) {
       }
     }

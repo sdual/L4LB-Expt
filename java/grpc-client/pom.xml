@@ -12,7 +12,7 @@
   <artifactId>grpc-client</artifactId>
 
   <properties>
-    <grpc.version>1.16.1</grpc.version>
+    <grpc.version>1.19.0</grpc.version>
   </properties>
 
   <dependencies>
