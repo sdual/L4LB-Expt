@@ -1,9 +1,9 @@
 # L4LB-Expt
 
-This repository is for the experiment whether the L4 load balancer distributes requests to the gRPC application servers uniformly.
+This repository is for the experiment whether the L4 load balancer distributes requests to the gRPC application servers uniformly. grpc-java provides options which allow you to manage TCP connection, `MAX_CONNECTION_AGE`, `MAX_CONNECTION_IDLE` and so on.
 
-https://github.com/grpc/proposal/blob/master/A9-server-side-conn-mgt.md
-https://github.com/grpc/proposal/blob/master/A6-client-retries.md#hedging-policy
+- https://github.com/grpc/proposal/blob/master/A9-server-side-conn-mgt.md
+- https://github.com/grpc/proposal/blob/master/A6-client-retries.md#hedging-policy
 
 ## Usage
 
